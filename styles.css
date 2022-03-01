@@ -65,7 +65,7 @@ input:hover {
   align-items: center;
   justify-content: flex-end;
   gap: 15px;
-  padding-right: 15px;
+  padding-right: 3%;
 }
 
 .profiletop {
@@ -110,7 +110,7 @@ input:hover {
 }
 
 .buttons {
-  padding-right: 5%;
+  padding-right: 3%;
   display: flex;
   align-items: center;
   gap: 5%;
@@ -184,9 +184,75 @@ button:hover {
 }
 
 .container {
-  background: #cfcfd3;
   grid-column: 3 / span 10;
   grid-row: 3 / span 10;
   margin: 10px;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.projects {
+  grid-column: 1 / span 4;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.projects > div {
+  height: 150px;
+  background: #cfcfd3;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 10px 1fr;
+  grid-template-rows: 80% 20%;
+}
+
+.colorbar {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 2;
+  background: linear-gradient(180deg, #111123, #23b3a7);
+  border-radius: 5px 0 0 5px;
+}
+
+.texts {
+  padding-left: 10px;
+  padding-right: 10px;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  text-align: justify;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.description {
+  font-size: small;
+  font-weight: 300;
+}
+
+.projecticons {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  padding-right: 3%;
+  padding-bottom: 2%;
+  justify-self: end;
+  align-self: center;
+  display: flex;
+  gap: 10px;
+}
+
+.projecticons > img {
+  height: 17px;
+}
+
+.rightbar {
+  background: #cfcfd3;
+  grid-column: 5 / span 1;
   border-radius: 5px;
 }
