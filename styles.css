@@ -3,8 +3,107 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background: gray;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(85px, 1fr));
+  grid-template-rows: repeat(12, 1fr);
+  background: #6B7280;
+  height: 100vh;
+}
+
+.header {
+  background: #cfcfd3;
+  grid-column: 3 / span 10;
+  grid-row: 1 / span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: left;
+}
+
+.search-container {
+  background: red;
+  grid-column: 1 / span 1;
+  grid-row: 1;
+  gap: 10px;
+  margin-left: 10px;
+  display: flex;
+  width: 75%;
+}
+
+.search-container > label > img {
+  height: 1.5rem;
+}
+
+.searchbar {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+.sidebar {
+  background: #111123;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 12;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 8%;
+}
+
+.logo {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo > img {
+  padding-top: 5%;
+  width: 90%;
+}
+
+.navigation {
+  grid-column: 1;
+  grid-row: 4 / span 6;
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.help-panel {
+  grid-column: 1;
+  grid-row: 10 / span 4;
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home, .profile, .messages, .history, .tasks, .communities, .settings, .support, .privacy {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons {
+  height: 1rem;
+}
+
+.container {
+  background: #cfcfd3;
+  grid-column: 3 / span 10;
+  grid-row: 3 / span 10;
+  margin: 10px;
+  border-radius: 5px;
 }
