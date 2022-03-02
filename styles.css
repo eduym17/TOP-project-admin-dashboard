@@ -84,7 +84,8 @@ input:hover {
 }
 
 .profilebottom {
-  height: 100%;
+  width: 100%;
+  height: 80%;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -102,6 +103,7 @@ input:hover {
   align-items: flex-start;
   justify-content: center;
   font-size: large;
+  flex-wrap: nowrap;
 }
 
 .welcometext {
@@ -136,11 +138,12 @@ button:hover {
 .sidebar {
   background: #111123;
   grid-column: 1 / span 2;
-  grid-row: 1 / span 12;
+  grid-row: 1 / span 13;
   display: flex;
   flex-direction: column;
   color: white;
   gap: 8%;
+  height: 100vh;
 }
 
 .logo {
@@ -148,6 +151,7 @@ button:hover {
   grid-row: 1 / span 2;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .logo > img {
@@ -190,17 +194,19 @@ button:hover {
   border-radius: 5px;
   display: grid;
   grid-template-columns: repeat(4, 1fr) 1fr;
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fill, 1fr);
+  align-items: start;
   gap: 10px;
 }
 
 .projects {
   grid-column: 1 / span 4;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 10px;
   padding: 10px;
   overflow: auto;
+  max-height: 80vh;
 }
 
 .projects > div {
@@ -233,7 +239,8 @@ button:hover {
 
 .description {
   font-size: small;
-  font-weight: 300;
+  font-weight: 400;
+  font-family: 'Lato', sans-serif;
 }
 
 .projecticons {
@@ -252,7 +259,81 @@ button:hover {
 }
 
 .rightbar {
-  background: #cfcfd3;
   grid-column: 5 / span 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  font-weight: 600;
+  overflow: auto;
+}
+
+.announcements {
+  background: #cfcfd3;
   border-radius: 5px;
+  padding: 5px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+}
+
+.announcement {
+  border-top: 1px solid #585865;
+  font-weight: 500;
+  font-size: small;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  overflow: hidden;
+}
+
+.ann-description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: small;
+}
+
+.trendings {
+  background: #cfcfd3;
+  padding-left: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.trendings > p {
+  align-self: flex-start;
+  padding-bottom: 2%;
+}
+
+.trending {
+  font-weight: 500;
+  font-size: small;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  height: 50px;
+}
+
+.trendpicture {
+  height: 35px;
+  border-radius: 25px;
+}
+
+.trendingtexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag {
+  color: #5d3b8f;
+}
+
+.tren-description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: small;
 }
